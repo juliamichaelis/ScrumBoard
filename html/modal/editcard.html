@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/modal.css">
+    <link rel="stylesheet" href="../../css/nav.css">
+    <script src="../../js/modal/editcard/init.js"></script>
+    <title>Karte bearbeiten</title>
+  </head>
+  <body onload="init()">
+    <nav class="navbar" style="height:40px">
+      <span style="float:left">
+        <img src="../../icons/insertComment.png" title="Kommentar hinzufügen" onclick="insertComment()" style="vertical-align:bottom; height:20px">
+      </span>
+      <span style="float:left">
+        <img src="../../icons/insertShape.png" title="Figuren hinzufügen" style="vertical-align:bottom; height:20px">
+      </span>
+      <span style="float:left">
+        <img src="../../icons/addlearncard.png" title="Lernkarte definieren" style="vertical-align:bottom; height:20px">
+      </span>
+      </nav>
+      <div id="textarea" class="textarea-div">
+        <label for="abstract">Kurzbeschreibung</label>
+        <textarea class="abstract" id="abstract" name="abstract"></textarea>
+      </div>
+      <div class="buttonbar">
+        <span class="button-span">
+          <img src="../../icons/ok.png" onclick="save()" title="Änderungen übernehmen">
+        </span>
+        <span class="button-span">
+          <img src="../../icons/cancel.png" onclick="cancel();" title="Änderungen verwerfen">
+        </span>
+       
+      </div>
+  </body>

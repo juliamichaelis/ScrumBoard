@@ -1,0 +1,9 @@
+.dragCard {
+    background-color: red;
+    padding: 0px;
+    margin: 10px;
+    border-style: dashed;
+    border-width: 1px;
+    height: 100px;
+    opacity: 0.5;
+}

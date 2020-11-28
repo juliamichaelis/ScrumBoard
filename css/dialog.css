@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'dialog-header';
+    src: url('../fonts/open-sans/OpenSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'dialog-content';
+    src: url('../fonts/open-sans/OpenSans-Light.ttf');
+}
+
+dialog{
+    padding: 0px;
+    top:0px;
+    border-style: none;
+    background-color: rgba(0,0,0,0);
+    border-width: 1px;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.dialog-header {
+    background-color:#528CE0;
+    text-align: center; 
+    width:100%;
+    height:34px;
+    font-family: dialog-header;
+    cursor: pointer;
+    color:white;
+}
+
+.dialog-name {
+    vertical-align:-webkit-baseline-middle;  
+}
+
+.dialog-close{
+    float: right;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.dialog-close:hover {
+    background-color: lightskyblue;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.dialog-content {
+    font-family: dialog-content;
+    font-size: 14px;
+    color: black;
+    background-color:aliceblue;
+    padding:10px;
+    min-height:100px;
+}
+
+.dialog-button-div {
+    font-family: dialog-header;
+    font-size: 20px;
+    color: white;
+    background-color:#528CE0;
+    padding:10px;  
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dialog-button {
+    border: none;
+    background-color: rgba(0,0,0,0);
+    font-family: dialog-header;
+    font-size: 14px;
+    color: white;
+    border-width: 1px;
+    border-color: black;
+    outline: none;
+    padding: 5px;
+}
+
+.dialog-button:hover {
+    background-color:lightskyblue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dialog-input {
+    margin: 10px;
+    background-color: #528CE0;
+    border: none;
+    padding: 5px;
+    width: 500px;
+    color: white;
+    outline: none;
+    min-height:100px;
+}
