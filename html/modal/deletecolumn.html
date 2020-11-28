@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/modal.css">
+    <script src="../../js/modal/deletecolumn/init.js"></script>
+    <title>Spalte löschen</title>
+  </head>
+  <body onload="init()">
+    <div class="infobox">
+         
+        <img class="infobox-img" src="../../icons/info.png" align="middle">
+        <span class="infobox-text">Soll die Spalte und alle Karten in der Spalte gelöscht werden ?</span>
+    </div>
+      <div class="buttonbar">
+        <span class="button-span">
+          <img src="../../icons/ok.png" onclick="deleteColumn();" title="Löschen durchführen">
+        </span>
+        <span class="button-span">
+          <img src="../../icons/cancel.png" onclick="cancel();" title="Löschen abbrechen">
+        </span>
+       
+      </div>
+  </body>

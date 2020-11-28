@@ -1,0 +1,46 @@
+{
+    "name": "MI-Kan",
+    "productName": "MI-Kan",
+    "version": "1.0.0",
+    "main": "main.js",
+    "author": "René Michaelis <renemichaelis@gmx.de>",
+    "homepage": "http://www.unknown.de",
+    "license": "UNLICENSED",
+    "keywords": [
+        "util",
+        "functional",
+        "server",
+        "client",
+        "browser"
+    ],
+    "contributors": [],
+    "scripts": {
+        "start": "electron .",
+        "package-windows": "electron-packager . mi-scrum --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets/mi-kan.png --prune=true --out=release-builds", 
+        "package-linux": "electron-packager . mi-scrum --overwrite --asar=true --platform=linux --arch=x64 --icon=assests/mi-kan.png --prune=true --out=release-builds",
+        "pack": "build --dir",
+        "dist": "build",
+        "postinstall": "electron-builder install-app-deps",
+        "createico": "png-to-ico assests/mi-kan.png > assests/mi-kan.ico"
+    },
+    "build": {
+        "linux": {
+            "icon": "assests/mi-kan.png",
+            "description": "Eine Applikation um Kanban Boards digital zu verwalten",
+            "synopsis": "Kanban Board",
+            "category": "office",
+            "target": [
+                "rpm"                
+            ]
+        }
+    },
+    "devDependencies": {
+        "electron-builder": "latest",
+        "yarn": "^1.16.0",
+        "electron": "latest"
+    },
+    "dependencies": {
+        "dom-event-proxy": "^1.0.4",
+        "uuid": "^3.3.2"
+    }
+}

@@ -1,0 +1,233 @@
+@font-face {
+  font-family: 'card-content';
+  src: url('../fonts/open-sans/OpenSans-Light.ttf');
+}
+
+@font-face {
+    font-family: 'card-header';
+    src: url('../fonts/open-sans/OpenSans-Bold.ttf');
+}
+
+.closed-column {
+    text-orientation: sideways;
+    writing-mode: vertical-rl;
+    background-color: #d8d4d4;
+    padding: 5px;
+    padding-top: 10px;
+    font-family: card-header;
+    cursor: pointer;
+    border-right-style: solid;
+    
+}
+
+.closed-column-name{
+    cursor: pointer;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    min-width: max-content;
+    height:100%;
+    border-style:solid;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 1px;
+}
+
+.column-header {
+    background-color: lavender;
+    text-align: center; 
+    width:100%;
+    height:44px;
+    font-family: card-header;
+    cursor: pointer;
+    color:black;    
+}
+
+.column-name {
+    vertical-align:-webkit-baseline-middle;   
+}
+
+.column-content {
+        overflow-y:auto;
+        height:100%;
+        width:100%;
+        background-color:white;
+}
+
+.column-config{
+    float: left;
+    padding: 5px;
+    margin:5px;
+    float:right;
+}
+
+.column-config:hover{
+    background-color: lightskyblue;
+    border-radius: 5px;
+    cursor: pointer;  
+}
+
+.column-add-card {
+    float: right;
+    padding: 5px;
+    margin: 5px;
+}
+
+.column-add-card:hover {
+    background-color: lightskyblue;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.column-delete {
+    vertical-align: -webkit-baseline-middle;
+    padding: 5px;
+    border-radius: 5px;
+    margin:5px;
+    float:right;
+}
+
+.column-delete:hover{
+    background-color: lightskyblue;
+    cursor:pointer;
+}
+
+.column-min {
+    vertical-align: -webkit-baseline-middle;
+    padding: 5px;
+    border-radius: 5px;
+    margin:5px;
+    float:left;
+}
+
+.column-min:hover{
+    background-color: lightskyblue;
+    cursor:pointer;
+}
+
+.column-left {
+    vertical-align: -webkit-baseline-middle;
+    padding: 5px;
+    border-radius: 5px;
+    margin:5px;
+    float:left;
+}
+
+.column-left:hover{
+    background-color: lightskyblue;
+    cursor:pointer;
+}
+
+.column-right {
+    vertical-align: -webkit-baseline-middle;
+    padding: 5px;
+    border-radius: 5px;
+    margin:5px;
+    float:left;
+}
+
+.column-right:hover{
+    background-color: lightskyblue;
+    cursor:pointer;
+}
+
+.card {
+    background-color: azure;
+    padding:0px;
+    margin:10px;
+    border-style: solid;
+    border-width:1px;
+    box-shadow: 5px 4px 3px grey;
+}
+
+.card-header {
+    background-color:lavender;
+    font-family: card-header;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-left-style: none;
+    border-bottom-color: black;
+    text-align: right;
+    cursor: move;
+    height: 34px;
+}
+
+.card-config {
+    vertical-align: -webkit-baseline-middle;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right:5px;
+}
+
+.card-config:hover{
+    background-color: lightskyblue;
+    cursor:pointer;
+}
+
+.card-delete {
+    vertical-align: -webkit-baseline-middle;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right:5px;
+}
+
+.card-delete:hover{
+    background-color: lightskyblue;
+    cursor:pointer;
+}
+
+
+
+.card-content{
+     width: 100%;
+    font-family: card-header;
+    text-overflow: ellipsis;
+    white-space: pre-line;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    border-bottom:1px;
+    background-color: red;
+    color: white;
+    text-align: left;
+    border:none;
+    size:18px;
+    resize: vertical;
+}
+
+.card-content::-webkit-input-placeholder {
+    color: white;
+} 
+
+.comment-add {
+    text-align: -webkit-right;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right:5px;
+}
+
+.comment-add:hover{
+    background-color: lightskyblue;
+    cursor:pointer;
+}
+
+.comment-count{
+    margin: 2.5px;
+    background-color: whitesmoke;
+    float:left;
+    padding: 2.5px;
+    border-radius:5px;
+}

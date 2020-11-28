@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/modal.css">
+    <script src="../../js/modal/editcolumn/init.js"></script>
+    <title>Spalte bearbeiten</title>
+  </head>
+  <body onload="init()">
+      <form>
+        <label for="columnname">Spaltenname</label>
+        <input type="text" id="columnname" name="columnname" onkeydown="enter()"/>
+      </form>
+      <div class="buttonbar">
+        <span class="button-span">
+          <img src="../../icons/ok.png" onclick="save()" title="Änderungen übernehmen">
+        </span>
+        <span class="button-span">
+          <img src="../../icons/cancel.png" onclick="cancel();" title="Änderungen verwerfen">
+        </span>
+       
+      </div>
+  </body>

@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'menu';
+  src: url('../fonts/open-sans/OpenSans-ExtraBold.ttf');
+}
+
+.navbar {
+  margin: 0 0;
+  background-color: grey;
+  height: 35px;
+  font-family: menu;
+  position:absolute;
+  width:100%;
+  top: 0;
+}
+
+.navbar span {
+  font-size: 15px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  vertical-align: -webkit-baseline-middle;
+}
+
+.navbar span:hover{
+  background-color: lightgoldenrodyellow;
+  cursor: pointer;
+}
+
+
+

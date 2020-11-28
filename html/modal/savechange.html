@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/modal.css">
+    <script src="../../js/modal/savechanges/init.js"></script>
+    <title>Änderungen speichern</title>
+  </head>
+  <body onload="init()">
+    <div class="infobox">
+         
+        <img class="infobox-img" src="../../icons/info.png" align="middle">
+        <span class="infobox-text">Soll die Änderungen des Projektes gespeichert werden ?</span>
+    </div>
+      <div class="buttonbar">
+        <span class="button-span">
+          <img src="../../icons/ok.png" onclick="save();" title="Speichern durchführen">
+        </span>
+        <span class="button-span">
+          <img src="../../icons/cancel.png" onclick="cancel();" title="Nicht Speichern">
+        </span>
+       
+      </div>
+  </body>
