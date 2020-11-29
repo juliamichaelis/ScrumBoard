@@ -16,6 +16,7 @@ function load(e){
         buttonLabel: 'Laden',
         properties: ['openFile']
     }
+<<<<<<< HEAD
     try {
         var fileNames = remote.dialog.showOpenDialogSync(remote.getCurrentWindow(),options)
                
@@ -46,6 +47,38 @@ function load(e){
            
         } catch(e){
         console.log(e)
+=======
+    try{
+        var fileNames = remote.dialog.showOpenDialog(remote.getCurrentWindow(),options);
+        if(fileNames === undefined){
+            return;
+        }
+        else {
+            var backup = fs.readFileSync(fileNames[0],'utf-8');
+            var currentProject = project.Project.getInstance();
+            
+            var board = currentProject.getBoard();
+            board.restore(backup);
+            currentProject.setFilename(fileNames[0]);
+            currentProject.setDirty(false);
+            remote.getCurrentWindow().setTitle('MI-SCRUM ' + fileNames[0]);
+            
+
+            var homepath = remote.app.getPath("home");
+            var confDir = homepath + "/" + ".mi-scrum";
+            var confFile = confDir + "/" + "config.json";
+            var configString = fs.readFileSync(confFile);
+            configure = JSON.parse(configString);
+            configure.lastFile = fileNames[0];
+
+            var configString = JSON.stringify(configure);
+            fs.writeFileSync(confFile,configString);
+
+
+
+        }
+    } catch(e){
+>>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
         var currentProject = project.Project.getInstance();
         currentProject.setFilename(oldFilename);
         currentProject.getBoard().restore(oldContent);
@@ -57,8 +90,12 @@ function load(e){
             titleBarStyle: "customButtonsOnHover",
             show: false,
             webPreferences: {
+<<<<<<< HEAD
                 nodeIntegration: true,
                 enableRemoteModule: true
+=======
+                nodeIntegration: true
+>>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
             },
         })
         win.setMenuBarVisibility(false);
@@ -86,8 +123,12 @@ class AddColumnEventListener extends listener.MouseListener {
             titleBarStyle: "customButtonsOnHover",
             show: false,
             webPreferences: {
+<<<<<<< HEAD
                 nodeIntegration: true,
                 enableRemoteModule: true
+=======
+                nodeIntegration: true
+>>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
             },
         })
         win.setMenuBarVisibility(false);
@@ -120,7 +161,11 @@ class SaveListener extends listener.MouseListener {
             defaultPath: filename
         }
 
+<<<<<<< HEAD
         const savePath = remote.dialog.showSaveDialogSync(remote.getCurrentWindow(),options);
+=======
+        const savePath = remote.dialog.showSaveDialog(remote.getCurrentWindow(),options);
+>>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
         const content = currentProject.getBoard().backup();
         if(savePath != '' && savePath != undefined){
             try{
@@ -151,8 +196,12 @@ class SaveListener extends listener.MouseListener {
                     titleBarStyle: "customButtonsOnHover",
                     show: false,
                     webPreferences: {
+<<<<<<< HEAD
                         nodeIntegration: true,
                         enableRemoteModule: true
+=======
+                        nodeIntegration: true
+>>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
                     },
                 })
                 win.setMenuBarVisibility(false);
@@ -194,8 +243,12 @@ class LoadListener extends listener.MouseListener {
             titleBarStyle: "customButtonsOnHover",
             show: false,
             webPreferences: {
+<<<<<<< HEAD
                 nodeIntegration: true,
                 enableRemoteModule: true
+=======
+                nodeIntegration: true
+>>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
             },
         })
         win.setMenuBarVisibility(false);
@@ -240,8 +293,12 @@ class NewListener extends listener.MouseListener {
             titleBarStyle: "customButtonsOnHover",
             show: false,
             webPreferences: {
+<<<<<<< HEAD
                 nodeIntegration: true,
                 enableRemoteModule: true
+=======
+                nodeIntegration: true
+>>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
             },
         })
         win.setMenuBarVisibility(false);
@@ -285,8 +342,12 @@ class ExitListener extends listener.MouseListener {
             titleBarStyle: "customButtonsOnHover",
             show: false,
             webPreferences: {
+<<<<<<< HEAD
                 nodeIntegration: true,
                 enableRemoteModule: true
+=======
+                nodeIntegration: true
+>>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
             },
         })
         win.setMenuBarVisibility(false);
@@ -325,8 +386,12 @@ class UndoListener extends listener.MouseListener {
                 titleBarStyle: "customButtonsOnHover",
                 show: false,
                 webPreferences: {
+<<<<<<< HEAD
                     nodeIntegration: true,
                     enableRemoteModule: true
+=======
+                    nodeIntegration: true
+>>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
                 },
             })
             win.setMenuBarVisibility(false);
@@ -364,8 +429,12 @@ class RedoListener extends listener.MouseListener {
                 titleBarStyle: "customButtonsOnHover",
                 show: false,
                 webPreferences: {
+<<<<<<< HEAD
                     nodeIntegration: true,
                     enableRemoteModule: true
+=======
+                    nodeIntegration: true
+>>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
                 },
             })
             win.setMenuBarVisibility(false);

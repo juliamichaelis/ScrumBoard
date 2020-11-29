@@ -6,7 +6,10 @@ function init(){
 
 function cancel(){
     var window = remote.getCurrentWindow(); 
+<<<<<<< HEAD
     alert("window" + window)
+=======
+>>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
     window.close();
     window = null;
 }
