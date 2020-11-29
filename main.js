@@ -18,25 +18,19 @@ function createWindow () {
   // Erstellen des Browser-Fensters.
   win = new BrowserWindow({
     webPreferences: {
-<<<<<<< HEAD
+
         nodeIntegration: true,
         enableRemoteModule: true
-=======
-        nodeIntegration: true
->>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
     },
     icon: path.join(__dirname, '/assests/mi-kan.png')
   })
-  win.setMenuBarVisibility(false);
+  win.setMenuBarVisibility(true);
   //win.setIcon(__dirname + "/assests/mi-kan.png");
   win.maximize();
   // und Laden der index.html der App.
   win.loadFile('./html/index.html');
-<<<<<<< HEAD
-  win.setClosable(true);
-=======
   win.setClosable(false);
->>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
+
  
 
   

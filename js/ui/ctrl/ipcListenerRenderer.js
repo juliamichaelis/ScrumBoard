@@ -163,12 +163,10 @@ ipc.on("save", (event, args) => {
                     titleBarStyle: "customButtonsOnHover",
                     show: false,
                     webPreferences: {
-<<<<<<< HEAD
+
                         nodeIntegration: true,
                         enableRemoteModule: true
-=======
-                        nodeIntegration: true
->>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
+
                     },
                 })
                 win.setMenuBarVisibility(false);
@@ -196,12 +194,8 @@ ipc.on("closeWindow", (event,args) => {
             titleBarStyle: "customButtonsOnHover",
             show: false,
             webPreferences: {
-<<<<<<< HEAD
                 nodeIntegration: true,
                 enableRemoteModule: true
-=======
-                nodeIntegration: true
->>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
             },
         })
         win.setMenuBarVisibility(false);

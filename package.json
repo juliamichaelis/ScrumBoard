@@ -16,14 +16,10 @@
     "contributors": [],
     "scripts": {
         "start": "electron .",
-<<<<<<< HEAD
         "package-windows": "electron-packager . mi-scrum --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets/mi-kan.png --prune=true --out=release-builds",
         "package-linux": "electron-packager . mi-scrum --overwrite --asar=true --platform=linux --arch=x64 --icon=assests/mi-kan.png --prune=true --out=release-builds",
 	"dist-linux": "electron-builder build",
-=======
-        "package-windows": "electron-packager . mi-scrum --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets/mi-kan.png --prune=true --out=release-builds", 
-        "package-linux": "electron-packager . mi-scrum --overwrite --asar=true --platform=linux --arch=x64 --icon=assests/mi-kan.png --prune=true --out=release-builds",
->>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
+
         "pack": "build --dir",
         "dist": "build",
         "postinstall": "electron-builder install-app-deps",
@@ -36,16 +32,11 @@
             "synopsis": "Kanban Board",
             "category": "office",
             "target": [
-<<<<<<< HEAD
                 "rpm"
-=======
-                "rpm"                
->>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
             ]
         }
     },
     "devDependencies": {
-<<<<<<< HEAD
         "electron-builder": "^22.9.1",
         "electron-packager": "^15.1.0",
         "yarn": "^1.16.0",
@@ -54,14 +45,5 @@
     "dependencies": {
         "dom-event-proxy": "^1.0.4",
         "uuid": "^3.4.0"
-=======
-        "electron-builder": "latest",
-        "yarn": "^1.16.0",
-        "electron": "latest"
-    },
-    "dependencies": {
-        "dom-event-proxy": "^1.0.4",
-        "uuid": "^3.3.2"
->>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
     }
 }

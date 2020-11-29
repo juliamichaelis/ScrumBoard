@@ -50,12 +50,10 @@ class ColumnDeleteListener extends listener.MouseListener {
             titleBarStyle: "customButtonsOnHover",
             show: false,
             webPreferences: {
-<<<<<<< HEAD
+
                 nodeIntegration: true,
                 enableRemoteModule: true
-=======
-                nodeIntegration: true
->>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
+
             },
         })
         win.setMenuBarVisibility(false);
@@ -79,11 +77,7 @@ class ColumnAddCardListener extends listener.MouseListener {
     onClick(e){
         e.stopPropagation();
         var screens = require("electron").screen;
-<<<<<<< HEAD
-        //var desktop = screens.getDisplayMatching(remote.getCurrentWindow().getBounds());
-=======
-        var desktop = screens.getDisplayMatching(remote.getCurrentWindow().getBounds());
->>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
+
         console.log(remote.getCurrentWindow().getSize().width)
     
         let win = new remote.BrowserWindow({
@@ -97,12 +91,8 @@ class ColumnAddCardListener extends listener.MouseListener {
             x: remote.getCurrentWindow().getBounds().x,
             y: remote.getCurrentWindow().getBounds().y,
             webPreferences: {
-<<<<<<< HEAD
                 nodeIntegration: true,
                 enableRemoteModule: true
-=======
-                nodeIntegration: true
->>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
             },
         })
         win.setMenuBarVisibility(false);
@@ -133,12 +123,8 @@ class ColumnConfigListener extends listener.MouseListener {
             titleBarStyle: "customButtonsOnHover",
             show: false,
             webPreferences: {
-<<<<<<< HEAD
                 nodeIntegration: true,
                 enableRemoteModule: true
-=======
-                nodeIntegration: true
->>>>>>> 05a04a12c3f5caae3cfceebd337d45b28d916761
             },
         })
         win.setMenuBarVisibility(false);
