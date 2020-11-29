@@ -12,17 +12,21 @@ app.commandLine.appendSwitch("--no-sandbox");
 
 let win
 
-function createWindow () {
+function createWindow() {
   const appIcon = new Tray(__dirname + "/assests/icons/png/256x256.png");
   console.log(__dirname + "/assests/icons/png/256x256.png");
   // Erstellen des Browser-Fensters.
   win = new BrowserWindow({
     webPreferences: {
-
+        
         nodeIntegration: true,
         enableRemoteModule: true
     },
-    icon: path.join(__dirname, '/assests/mi-kan.png')
+    icon: path.join(__dirname, '/assests/mi-kan.png'),
+    frame: false,
+    transparent: true,
+    resizable: true,
+    maximize: true
   })
   win.setMenuBarVisibility(true);
   //win.setIcon(__dirname + "/assests/mi-kan.png");
@@ -79,10 +83,12 @@ app.on('ready', (event,args) => {
     configure = JSON.parse(configString);
   }
   console.log(configure);
-  createWindow();
-  win.webContents.once('did-finish-load', () => {
-    win.webContents.send("load",configure.lastFile);
-  },configure.lastFile);
+  setTimeout(function(){
+    createWindow()
+    win.webContents.once('did-finish-load', () => {
+      win.webContents.send("load",configure.lastFile);
+    },configure.lastFile);
+  },500);
   
 })
 

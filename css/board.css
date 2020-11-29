@@ -11,7 +11,7 @@
 .closed-column {
     text-orientation: sideways;
     writing-mode: vertical-rl;
-    background-color: #d8d4d4;
+    background-color: #d8d4d470;
     padding: 5px;
     padding-top: 10px;
     font-family: card-header;
@@ -38,7 +38,7 @@
 }
 
 .column-header {
-    background-color: lavender;
+    background-color: rgba(230, 230, 250, 0.70);
     text-align: center; 
     width:100%;
     height:44px;
@@ -55,7 +55,7 @@
         overflow-y:auto;
         height:100%;
         width:100%;
-        background-color:white;
+        background-color:rgba(255, 255, 255, 0.70);
 }
 
 .column-config{
@@ -66,7 +66,7 @@
 }
 
 .column-config:hover{
-    background-color: lightskyblue;
+    background-color: rgba(135, 206, 250, 0.70);
     border-radius: 5px;
     cursor: pointer;  
 }
@@ -78,7 +78,7 @@
 }
 
 .column-add-card:hover {
-    background-color: lightskyblue;
+    background-color: rgba(135, 206, 250, 0.70);;
     padding: 5px;
     margin-right: 5px;
     border-radius: 5px;
@@ -94,7 +94,7 @@
 }
 
 .column-delete:hover{
-    background-color: lightskyblue;
+    background-color: rgba(135, 206, 250, 0.70);
     cursor:pointer;
 }
 
@@ -107,7 +107,7 @@
 }
 
 .column-min:hover{
-    background-color: lightskyblue;
+    background-color: rgba(135, 206, 250, 0.70);
     cursor:pointer;
 }
 
@@ -120,7 +120,7 @@
 }
 
 .column-left:hover{
-    background-color: lightskyblue;
+    background-color: rgba(135, 206, 250, 0.70);
     cursor:pointer;
 }
 
@@ -133,12 +133,12 @@
 }
 
 .column-right:hover{
-    background-color: lightskyblue;
+    background-color: rgba(135, 206, 250, 0.70);;
     cursor:pointer;
 }
 
 .card {
-    background-color: azure;
+    background-color: rgba(240, 255, 255, 0.0.70);
     padding:0px;
     margin:10px;
     border-style: solid;
@@ -147,7 +147,7 @@
 }
 
 .card-header {
-    background-color:lavender;
+    background-color:rgba(230, 230, 250, 0.70);
     font-family: card-header;
     overflow: hidden;
     margin: 0px;
@@ -158,7 +158,7 @@
     border-bottom: 1px;
     border-bottom-style: solid;
     border-left-style: none;
-    border-bottom-color: black;
+    border-bottom-color: rgba(0, 0, 0, 0.70);
     text-align: right;
     cursor: move;
     height: 34px;
@@ -172,7 +172,7 @@
 }
 
 .card-config:hover{
-    background-color: lightskyblue;
+    background-color: rgba(135, 206, 250, 0.7);
     cursor:pointer;
 }
 
@@ -184,7 +184,7 @@
 }
 
 .card-delete:hover{
-    background-color: lightskyblue;
+    background-color: rgba(135, 206, 250, 0.7);;
     cursor:pointer;
 }
 
@@ -199,7 +199,7 @@
     margin: 0px;
     padding: 0px;
     border-bottom:1px;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.246);
     color: white;
     text-align: left;
     border:none;
@@ -208,7 +208,7 @@
 }
 
 .card-content::-webkit-input-placeholder {
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
 } 
 
 .comment-add {
@@ -220,13 +220,13 @@
 }
 
 .comment-add:hover{
-    background-color: lightskyblue;
+    background-color: rgba(135, 206, 250, 0.70);
     cursor:pointer;
 }
 
 .comment-count{
     margin: 2.5px;
-    background-color: whitesmoke;
+    background-color: rgba(245, 245, 245, 0.7);
     float:left;
     padding: 2.5px;
     border-radius:5px;

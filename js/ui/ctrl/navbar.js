@@ -109,7 +109,6 @@ class SaveListener extends listener.MouseListener {
         timer.disableSaveTimer();
         var currentProject = project.Project.getInstance();
         var filename = currentProject.getFilename();
-        console.log("filename:" + filename);
         if(filename == "undefined"){
             filename = remote.app.getPath('home');
         }

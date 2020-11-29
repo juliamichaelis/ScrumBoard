@@ -3,7 +3,7 @@
     "productName": "MI-Kan",
     "version": "1.0.0",
     "main": "main.js",
-    "author": "René Michaelis <renemichaelis@gmx.de>",
+    "author": "Julia Michaelis <ju-michaelis@gmx.de>",
     "homepage": "http://www.unknown.de",
     "license": "UNLICENSED",
     "keywords": [
@@ -15,11 +15,10 @@
     ],
     "contributors": [],
     "scripts": {
-        "start": "electron .",
+        "start": "electron --enable-transparent-visuals .",
         "package-windows": "electron-packager . mi-scrum --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets/mi-kan.png --prune=true --out=release-builds",
         "package-linux": "electron-packager . mi-scrum --overwrite --asar=true --platform=linux --arch=x64 --icon=assests/mi-kan.png --prune=true --out=release-builds",
-	"dist-linux": "electron-builder build",
-
+        "dist-linux": "electron-builder build",
         "pack": "build --dir",
         "dist": "build",
         "postinstall": "electron-builder install-app-deps",
@@ -40,7 +39,7 @@
         "electron-builder": "^22.9.1",
         "electron-packager": "^15.1.0",
         "yarn": "^1.16.0",
-	"electron": "10.1.1"
+        "electron": "9.0.0"
     },
     "dependencies": {
         "dom-event-proxy": "^1.0.4",
