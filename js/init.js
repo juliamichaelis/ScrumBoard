@@ -12,6 +12,7 @@ var ipc = require("../js/ui/ctrl/ipcListenerRenderer.js");
 
 
 function init(){
+    console.log("init")
     var EventProxy = require('dom-event-proxy');
     const eventproxy = new EventProxy()
     

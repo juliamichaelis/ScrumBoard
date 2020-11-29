@@ -163,7 +163,8 @@ ipc.on("save", (event, args) => {
                     titleBarStyle: "customButtonsOnHover",
                     show: false,
                     webPreferences: {
-                        nodeIntegration: true
+                        nodeIntegration: true,
+                        enableRemoteModule: true
                     },
                 })
                 win.setMenuBarVisibility(false);
@@ -191,7 +192,8 @@ ipc.on("closeWindow", (event,args) => {
             titleBarStyle: "customButtonsOnHover",
             show: false,
             webPreferences: {
-                nodeIntegration: true
+                nodeIntegration: true,
+                enableRemoteModule: true
             },
         })
         win.setMenuBarVisibility(false);

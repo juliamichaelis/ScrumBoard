@@ -125,7 +125,8 @@ class CardDeleteListener extends listener.MouseListener {
             titleBarStyle: "customButtonsOnHover",
             show: false,
             webPreferences: {
-                nodeIntegration: true
+                nodeIntegration: true,
+                enableRemoteModule: true
             },
         })
         win.setMenuBarVisibility(false);
@@ -175,7 +176,8 @@ class CardConfigListener extends listener.MouseListener {
             x: remote.getCurrentWindow().x,
             y: remote.getCurrentWindow().y,
             webPreferences: {
-                nodeIntegration: true
+                nodeIntegration: true,
+                enableRemoteModule: true
             },
         })
         win.setMenuBarVisibility(false);

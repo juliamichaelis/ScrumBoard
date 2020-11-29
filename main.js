@@ -18,7 +18,8 @@ function createWindow () {
   // Erstellen des Browser-Fensters.
   win = new BrowserWindow({
     webPreferences: {
-        nodeIntegration: true
+        nodeIntegration: true,
+        enableRemoteModule: true
     },
     icon: path.join(__dirname, '/assests/mi-kan.png')
   })
@@ -27,7 +28,7 @@ function createWindow () {
   win.maximize();
   // und Laden der index.html der App.
   win.loadFile('./html/index.html');
-  win.setClosable(false);
+  win.setClosable(true);
  
 
   

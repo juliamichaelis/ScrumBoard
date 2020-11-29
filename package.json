@@ -16,8 +16,9 @@
     "contributors": [],
     "scripts": {
         "start": "electron .",
-        "package-windows": "electron-packager . mi-scrum --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets/mi-kan.png --prune=true --out=release-builds", 
+        "package-windows": "electron-packager . mi-scrum --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets/mi-kan.png --prune=true --out=release-builds",
         "package-linux": "electron-packager . mi-scrum --overwrite --asar=true --platform=linux --arch=x64 --icon=assests/mi-kan.png --prune=true --out=release-builds",
+	"dist-linux": "electron-builder build",
         "pack": "build --dir",
         "dist": "build",
         "postinstall": "electron-builder install-app-deps",
@@ -30,17 +31,18 @@
             "synopsis": "Kanban Board",
             "category": "office",
             "target": [
-                "rpm"                
+                "rpm"
             ]
         }
     },
     "devDependencies": {
-        "electron-builder": "latest",
+        "electron-builder": "^22.9.1",
+        "electron-packager": "^15.1.0",
         "yarn": "^1.16.0",
-        "electron": "latest"
+	"electron": "10.1.1"
     },
     "dependencies": {
         "dom-event-proxy": "^1.0.4",
-        "uuid": "^3.3.2"
+        "uuid": "^3.4.0"
     }
 }
