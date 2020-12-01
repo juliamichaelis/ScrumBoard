@@ -21,7 +21,8 @@ function cancel(){
 function save(){
     
     var parent = remote.getCurrentWindow().getParentWindow();
-    var abstract = document.getElementById("editor").value;
+    var abstract = document.getElementById("abstract")
+    abstract = abstract.childNodes[0].innerHTML
     var ipcrenderer = electron.ipcRenderer;
     var comments = [];
     commentsIds.forEach(function(element){

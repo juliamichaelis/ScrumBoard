@@ -13,7 +13,7 @@
 
     <title>Karte erstellen</title>
   </head> 
-<body>
+<body onload="init()">
   <nav class="navbar" style="height:40px">
     <span style="float:left">
       <img src="../../icons/insertComment.png" title="Kommentar hinzufügen" onclick="insertComment()" style="vertical-align:bottom; height:20px">
@@ -21,7 +21,7 @@
     </nav>
       <div id="textarea" class="textarea-div">
         <label for="abstract">Kurzbeschreibung</label>
-        <div id="editor" class="abstract" name="abstract">
+        <div id="abstract" class="abstract" name="abstract">
          
         </div> 
       </textarea>
@@ -37,7 +37,7 @@
         
       </div>
       <script>
-        var quill = new Quill('#editor', {
+        var quill = new Quill('#abstract', {
           modules: {
             toolbar: true
           },
