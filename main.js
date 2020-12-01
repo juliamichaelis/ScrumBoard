@@ -28,7 +28,7 @@ function createWindow() {
     resizable: true,
     maximize: true
   })
-  win.setMenuBarVisibility(false);
+  win.setMenuBarVisibility(true);
   //win.setIcon(__dirname + "/assests/mi-kan.png");
   win.maximize();
   // und Laden der index.html der App.

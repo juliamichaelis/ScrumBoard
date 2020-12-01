@@ -21,7 +21,7 @@ function cancel(){
 function save(){
     
     var parent = remote.getCurrentWindow().getParentWindow();
-    var abstract = document.getElementById("abstract").value;
+    var abstract = document.getElementById("editor").value;
     var ipcrenderer = electron.ipcRenderer;
     var comments = [];
     commentsIds.forEach(function(element){
@@ -84,8 +84,6 @@ function deleteComment(uuid){
 }
 
 function enter(){
-    console.log(event);
-    console.log("enter");
     if(event.keyCode==13){
         save();
     }

@@ -6,25 +6,25 @@
     <link rel="stylesheet" href="../../css/modal.css">
     <link rel="stylesheet" href="../../css/nav.css">
     <script src="../../js/modal/newcard/init.js"></script>
-    
+    <script src="../../js/quill.min.js"></script>
+    <link href="../../css/quill.bubble.css" rel="stylesheet">
+    <link href="../../css/quill.snow.css" rel="stylesheet">
+    <link href="../../css/quill.core.css" rel="stylesheet">
+
     <title>Karte erstellen</title>
-  </head>
-  <body onload="init()">
-    <nav class="navbar" style="height:40px">
+  </head> 
+<body>
+  <nav class="navbar" style="height:40px">
     <span style="float:left">
       <img src="../../icons/insertComment.png" title="Kommentar hinzufügen" onclick="insertComment()" style="vertical-align:bottom; height:20px">
-    </span>
-    <span style="float:left">
-      <img src="../../icons/insertShape.png" title="Figuren hinzufügen" style="vertical-align:bottom; height:20px">
-    </span>
-    <span style="float:left">
-      <img src="../../icons/addlearncard.png" title="Lernkarte definieren" style="vertical-align:bottom; height:20px">
     </span>
     </nav>
       <div id="textarea" class="textarea-div">
         <label for="abstract">Kurzbeschreibung</label>
-        <textarea class="abstract" id="abstract" name="abstract"></textarea>    
-        </textarea>
+        <div id="editor" class="abstract" name="abstract">
+         
+        </div> 
+      </textarea>
       </div>
       <div class="buttonbar">
         
@@ -36,4 +36,13 @@
         </span>
         
       </div>
+      <script>
+        var quill = new Quill('#editor', {
+          modules: {
+            toolbar: true
+          },
+          placeholder: 'Compose an epic...',
+          theme: 'snow'  // or 'snow'
+        });
+      </script>
   </body>
