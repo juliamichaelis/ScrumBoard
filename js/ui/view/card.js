@@ -48,7 +48,7 @@ class CardView extends observerPattern.Observer {
        
         var cardContentDiv = document.createElement("div");
         cardContentDiv.setAttribute("style","height:100%; background-color:red;");
-        var cardContent = document.createElement("textarea");
+        var cardContent = document.createElement("div");
         cardContent.readOnly = true;
         cardContent.setAttribute("class","card-content");
         cardContent.setAttribute("placeholder", "Kurzbeschreibung");

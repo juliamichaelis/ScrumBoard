@@ -7,7 +7,14 @@ function init(){
     var win = remote.getCurrentWindow();
     var ipcrenderer = electron.ipcRenderer;
     ipcrenderer.on('editcard', (event,args) => {
-        document.getElementById("abstract").value= args[0];
+        var quill = new Quill('#abstract', {
+            modules: {
+              toolbar: true
+            },
+            placeholder: 'Compose an epic...',
+            theme: 'snow'  // or 'snow'
+        });
+        document.getElementById("abstract").childNodes[0].innerHTML= args[0];
         modelId = args[1];
         var comments = args[2];
         comments.forEach(element => {
@@ -79,7 +86,7 @@ function cancel(){
 function save(){
     console.log("save");
     var parent = remote.getCurrentWindow().getParentWindow();
-    var abstract = document.getElementById("abstract").value;
+    var abstract = document.getElementById("abstract").childNodes[0].innerHTML;
     var ipcrenderer = electron.ipcRenderer;
     var comments = [];
     commentsIds.forEach(function(element){

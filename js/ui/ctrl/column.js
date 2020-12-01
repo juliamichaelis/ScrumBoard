@@ -95,7 +95,7 @@ class ColumnAddCardListener extends listener.MouseListener {
                 enableRemoteModule: true
             },
         })
-        win.setMenuBarVisibility(false);
+        win.setMenuBarVisibility(true);
         win.on('ready-to-show', () => {
             console.log("sendTo");
             electron.ipcRenderer.sendTo(win.webContents.id, "newcard",[this.model.id]);
