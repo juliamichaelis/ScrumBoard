@@ -23,12 +23,12 @@ function createWindow() {
         enableRemoteModule: true
     },
     icon: path.join(__dirname, '/assests/mi-kan.png'),
-    frame: false,
+    frame: true,
     transparent: true,
     resizable: true,
     maximize: true
   })
-  win.setMenuBarVisibility(true);
+  win.setMenuBarVisibility(false);
   //win.setIcon(__dirname + "/assests/mi-kan.png");
   win.maximize();
   // und Laden der index.html der App.
